@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d4a32" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="PriceBook" />
+  <title>PriceBook — HLF Business Calculator</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon.svg" />
+  <link rel="icon" href="icons/icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">PB</span> PriceBook</div>
+      <div class="grow"></div>
+      <select id="countrySelect" title="Country" style="max-width:140px;padding:6px 8px;border-radius:10px;border:0;background:rgba(255,255,255,.15);color:#fff;font-weight:700;">
+        <option value="">Country</option>
+      </select>
+      <button class="icon-btn" id="addCountryBtn" title="Add country">＋</button>
+    </header>
+    <main class="screens">
+      <section class="screen active" id="screen-home"></section>
+      <section class="screen" id="screen-catalog"></section>
+      <section class="screen" id="screen-order"></section>
+      <section class="screen" id="screen-quotes"></section>
+      <section class="screen" id="screen-more"></section>
+    </main>
+    <nav class="nav">
+      <button data-screen="home" class="active">Home</button>
+      <button data-screen="catalog">Catalog</button>
+      <button data-screen="order">Order</button>
+      <button data-screen="quotes">Quotes</button>
+      <button data-screen="more">More</button>
+    </nav>
+  </div>
+  <div class="modal-bg" id="modalBg"><div class="modal" id="modal"></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
